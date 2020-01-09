@@ -22,35 +22,22 @@ class Main extends React.Component {
         style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
       >
         <article
-          id="intro"
-          className={`${this.props.article === 'intro' ? 'active' : ''} ${
+          id="about"
+          className={`${this.props.article === 'about' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Intro</h2>
+          <h2 className="major">About Me</h2>
           <span className="image main">
             <img src={pic01} alt="" />
           </span>
           <p>
-            Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-            aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-            convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-            magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas.
-            By the way, check out my <a href="#work">awesome work</a>.
+          I love coding and data analysis! I am most familiar with bioinformatics analysis and have 9+ years in NGS data analysis. I can help you with your experimental design, on-prem and cloud computing infrastructure design, all the way to hands-on data analysis and reporting. I can also help you with technical training. 
           </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-            dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos. Etiam tristique
-            libero eu nibh porttitor fermentum. Nullam venenatis erat id
-            vehicula viverra. Nunc ultrices eros ut ultricies condimentum.
-            Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae
-            dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in
-            lectus. Pellentesque habitant morbi tristique senectus et netus et
-            malesuada fames ac turpis egestas. In non lorem sit amet elit
-            placerat maximus. Pellentesque aliquam maximus risus, vel sed
-            vehicula.
+          <p>I have over 15 years of experience in international interdisciplinary research. She has in-depth knowledge of statistics, computer science, and biology. Dr. WongI was previously a computational biologist at the Wellcome Trust Sanger Institute where she worked on a genetic interaction map for Caenorhabditis elegans. As a statistician, I also worked at Winton Capital Management in London on Transaction Cost Analysis. I was a bioinformatics scientist at Illumina Ltd. in Cambridge, UK, working on algorithms on next-generation sequencing data. I joined the Inova Translational Medicine Institute in 2013 as a Senior Bioinformatics Scientist and was promoted to Chief of Division of Bioinformatics in 2017. Since starting my career, I have published in numerous high profile journals including Nature, Nature Genetics, Cell, PNAS, Molecular Biology and Evolution.
+          </p>   
+          <p>I have a Ph.D. degree in Biometry (Biological Statistics) from Cornell University, where I developed statistical models to model the processes of molecular evolution using sequence data.  I hold M.S. degrees in Biometry and Computer Science from Cornell University. I also have a B.S. degree in Genetics, Bacteriology, Mathematics, Computer Sciences and Statistics from the University of Wisconsin - Madison. Recently I obtained AWS solutions architect associate and Machine Learning Specialty certificates. 
           </p>
           {close}
         </article>
@@ -62,7 +49,7 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Work</h2>
+          <h2 className="major">My CV</h2>
           <span className="image main">
             <img src={pic02} alt="" />
           </span>
@@ -85,24 +72,18 @@ class Main extends React.Component {
         </article>
 
         <article
-          id="about"
-          className={`${this.props.article === 'about' ? 'active' : ''} ${
+          id="publications"
+          className={`${this.props.article === 'publications' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">About</h2>
+          <h2 className="major">My Publications</h2>
           <span className="image main">
             <img src={pic03} alt="" />
           </span>
           <p>
-            Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent
-            eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam
-            erat volutpat. Praesent urna nisi, fringila lorem et vehicula
-            lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.
-            Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
-            Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit
-            amet.
+            A full list of my publications can be found at Google Scholar.
           </p>
           {close}
         </article>
@@ -140,25 +121,20 @@ class Main extends React.Component {
           <ul className="icons">
             <li>
               <a
-                href="https://twitter.com/HuntaroSan"
+                href="https://twitter.com/wendyWongSW"
                 className="icon fa-twitter"
               >
                 <span className="label">Twitter</span>
               </a>
             </li>
             <li>
-              <a href="https://codebushi.com" className="icon fa-facebook">
-                <span className="label">Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://codebushi.com" className="icon fa-instagram">
-                <span className="label">Instagram</span>
+              <a href="https://www.linkedin.com/in/wendyswwong/" className="icon fa-linkedin">
+                <span className="label">Linkedin</span>
               </a>
             </li>
             <li>
               <a
-                href="https://github.com/codebushi/gatsby-starter-dimension"
+                href="https://github.com/shukwong"
                 className="icon fa-github"
               >
                 <span className="label">GitHub</span>
