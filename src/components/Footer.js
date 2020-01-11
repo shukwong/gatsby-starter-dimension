@@ -4,6 +4,14 @@ import PropTypes from 'prop-types'
 const Footer = (props) => (
     <footer id="footer" style={props.timeout ? {display: 'none'} : {}}>
          <ul className="icons">
+         <li>
+              <a
+                href="https://medium.com/@wendy.wong"
+                className="icon fa-medium"
+              >
+                <span className="label">Medium</span>
+              </a>
+            </li>
             <li>
               <a
                 href="https://twitter.com/wendyWongSW"
