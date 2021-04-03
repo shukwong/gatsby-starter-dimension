@@ -41,6 +41,8 @@ class Main extends React.Component {
           </p>   
           <p>I have a Ph.D. degree in Biometry (Biological Statistics) from Cornell University, where I developed statistical models to model the processes of molecular evolution using sequence data.  I hold M.S. degrees in Biometry and Computer Science from Cornell University. I also have a B.S. degree in Genetics, Bacteriology, Mathematics, Computer Sciences and Statistics from the University of Wisconsin - Madison. Recently I obtained AWS solutions architect associate and Machine Learning Specialty certificates. 
           </p>
+          <p>I am currently the president and cofounder of <a href="https://coherentlogic.com/">Coherent Logic Limited</a>. Coherent Logic is a software engineering and data analytics consultancy located in McLean, VA and we offer our services to commercial, not-for-profit, and government organizations. The <a href="https://coherentlogic.com/about-coherent-logic-limited/coherent-logic-press-releases/">Coherent Logic press releases</a> page contains more information about some of the work we're doing.
+          </p>
           {close}
         </article>
 
