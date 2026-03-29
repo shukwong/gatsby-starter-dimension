@@ -4,7 +4,15 @@ import PropTypes from 'prop-types'
 const Footer = (props) => (
     <footer id="footer" style={props.timeout ? {display: 'none'} : {}}>
          <ul className="icons">
-         <li>
+            <li>
+              <a
+                href="https://scholar.google.com/citations?user=q91I6UYAAAAJ&hl=en"
+                className="icon fa-graduation-cap"
+              >
+                <span className="label">Google Scholar</span>
+              </a>
+            </li>
+            <li>
               <a
                 href="https://medium.com/@wendy.wong"
                 className="icon fa-medium"
@@ -14,15 +22,15 @@ const Footer = (props) => (
             </li>
             <li>
               <a
-                href="https://twitter.com/wendyWongSW"
+                href="https://x.com/wendyWongSW"
                 className="icon fa-twitter"
               >
-                <span className="label">Twitter</span>
+                <span className="label">X (Twitter)</span>
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com/in/wendyswwong/" className="icon fa-linkedin">
-                <span className="label">Linkedin</span>
+                <span className="label">LinkedIn</span>
               </a>
             </li>
             <li>

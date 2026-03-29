@@ -6,6 +6,48 @@ import pic03 from '../images/pic03.jpg'
 import wendyCV from '../images/WendyWongCV.png'
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      formStatus: null, // null, 'sending', 'success', 'error'
+    }
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  handleSubmit(e) {
+    e.preventDefault()
+    const form = e.target
+    const data = new FormData(form)
+
+    const name = data.get('name')
+    const email = data.get('email')
+    const message = data.get('message')
+
+    if (!name || !email || !message) {
+      this.setState({ formStatus: 'error-validation' })
+      return
+    }
+
+    this.setState({ formStatus: 'sending' })
+
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' },
+    })
+      .then((response) => {
+        if (response.ok) {
+          this.setState({ formStatus: 'success' })
+          form.reset()
+        } else {
+          this.setState({ formStatus: 'error' })
+        }
+      })
+      .catch(() => {
+        this.setState({ formStatus: 'error' })
+      })
+  }
+
   render() {
     let close = (
       <div
@@ -32,7 +74,7 @@ class Main extends React.Component {
           <h2 className="major">About Me</h2>
 
           <span className="image main">
-            <img src={pic01} alt="" />
+            <img src={pic01} alt="Bioinformatics data analysis" />
           </span>
           <p>
           I am a Senior Biomedical Scientist and Head of the Bioinformatics Virtual Core at the Division of Cancer Epidemiology and Genetics, National Cancer Institute (NCI), a position I have held since May 2022. My work focuses on leveraging computational and statistical methods to advance cancer genomics research.
@@ -56,7 +98,7 @@ class Main extends React.Component {
         >
           <h2 className="major">My CV</h2>
           <span className="image main">
-            <img src={wendyCV} alt="" />
+            <img src={wendyCV} alt="Wendy Wong's CV" />
           </span>
          
       
@@ -72,7 +114,7 @@ class Main extends React.Component {
         >
           <h2 className="major">My Publications</h2>
           <span className="image main">
-            <img src={pic03} alt="" />
+            <img src={pic03} alt="Scientific publications" />
           </span>
           <p>
             A full list of my publications can be found at <a href="https://scholar.google.com/citations?user=q91I6UYAAAAJ&hl=en">Google Scholar</a>. Here are some of the highlighted ones:
@@ -145,40 +187,62 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Contact</h2>
-          <form action="https://formspree.io/xyyeyepq" method="POST">
+          <form action="https://formspree.io/xyyeyepq" method="POST" onSubmit={this.handleSubmit}>
             <div className="field half first">
               <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
+              <input type="text" name="name" id="name" required />
             </div>
             <div className="field half">
               <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
+              <input type="email" name="email" id="email" required />
             </div>
             <div className="field">
               <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
+              <textarea name="message" id="message" rows="4" required></textarea>
             </div>
             <ul className="actions">
               <li>
-                <input type="submit" value="Send Message" className="special" />
+                <input
+                  type="submit"
+                  value={this.state.formStatus === 'sending' ? 'Sending...' : 'Send Message'}
+                  className="special"
+                  disabled={this.state.formStatus === 'sending'}
+                />
               </li>
               <li>
-                <input type="reset" value="Reset" />
+                <input type="reset" value="Reset" onClick={() => this.setState({ formStatus: null })} />
               </li>
             </ul>
+            {this.state.formStatus === 'success' && (
+              <p style={{ color: '#4CAF50' }}>Thank you! Your message has been sent.</p>
+            )}
+            {this.state.formStatus === 'error' && (
+              <p style={{ color: '#f44336' }}>Something went wrong. Please try again.</p>
+            )}
+            {this.state.formStatus === 'error-validation' && (
+              <p style={{ color: '#f44336' }}>Please fill in all fields.</p>
+            )}
           </form>
           <ul className="icons">
             <li>
               <a
-                href="https://twitter.com/wendyWongSW"
+                href="https://scholar.google.com/citations?user=q91I6UYAAAAJ&hl=en"
+                className="icon fa-graduation-cap"
+              >
+                <span className="label">Google Scholar</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://x.com/wendyWongSW"
                 className="icon fa-twitter"
               >
-                <span className="label">Twitter</span>
+                <span className="label">X (Twitter)</span>
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com/in/wendyswwong/" className="icon fa-linkedin">
-                <span className="label">Linkedin</span>
+                <span className="label">LinkedIn</span>
               </a>
             </li>
             <li>
