@@ -18,7 +18,6 @@ module.exports = {
         icon: 'src/images/wendy.jpg',
       },
     },
-    'gatsby-plugin-sass',
-    'gatsby-plugin-offline'
+    'gatsby-plugin-sass'
   ],
 }
