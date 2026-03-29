@@ -34,7 +34,7 @@ const Footer = (props) => (
               </a>
             </li>
           </ul>
-        <p className="copyright">&copy; Wendy Wong 2020. Theme designed by <a href="https://html5up.net">HTML5 UP</a>. Built with: <a href="https://www.gatsbyjs.org/">Gatsby.js</a></p>
+        <p className="copyright">&copy; Wendy Wong 2026. Theme designed by <a href="https://html5up.net">HTML5 UP</a>. Built with: <a href="https://www.gatsbyjs.org/">Gatsby.js</a></p>
     </footer>
 )
 

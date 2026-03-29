@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Wendy Wong's Personal Page",
     author: "Wendy Wong",
-    description: "Wendy Wong's homepage,  based on Dimension by HTML5 UP"
+    description: "Wendy Wong - Senior Biomedical Scientist & Head, Bioinformatics Virtual Core at NCI"
   },
   plugins: [
     'gatsby-plugin-react-helmet',
