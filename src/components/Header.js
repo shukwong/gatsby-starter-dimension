@@ -8,7 +8,7 @@ const Header = (props) => (
 
         
         <span className="image">
-            <img src={wendy} alt="" />
+            <img src={wendy} alt="Wendy Wong" />
           </span>
         
 
